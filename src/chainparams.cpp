@@ -64,7 +64,7 @@ public:
     CMainParams() {
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 840000;
-        consensus.BIP16Height = 218579; // 87afb798a3ad9378fcd56123c81fb31cfd9a8df4719b9774d71730c16315a092 - October 1, 2012
+        consensus.BIP16Height = 0; // 87afb798a3ad9378fcd56123c81fb31cfd9a8df4719b9774d71730c16315a092 - October 1, 2012
         consensus.BIP34Height = 0;
         consensus.BIP34Hash = uint256S("0cdcd7aef088bb71b200ebd0adf39bf4a8e2bf699a2b1dcf53d6acc76437f40c");
         consensus.BIP65Height = 0; // bab3041e8977e0dc3eeff63fe707b92bde1dd449d8efafb248c27c8264cc311a
@@ -107,8 +107,8 @@ public:
         pchMessageStart[3] = 0xdb;
         nDefaultPort = 1041;
         nPruneAfterHeight = 100000;
-        m_assumed_blockchain_size = 22;
-        m_assumed_chain_state_size = 3;
+        m_assumed_blockchain_size = 0;
+        m_assumed_chain_state_size = 0;
 
         genesis = CreateGenesisBlock(1587480269, 1596459, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
